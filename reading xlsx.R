@@ -1,11 +1,10 @@
 # Studying reference code
 
 # Make a function and later return subset data
-#readData = function(){}
-path = "E:\\Documents\\Programming\\R\\First-Project\\example.xlsx"
-  
-  #check file extension
- # if(grepl(".xlsx", path)){
+readData = function(path = "E:\\Documents\\Programming\\R\\excel\\example.xlsx"){
+
+#check file extension
+# if(grepl(".xlsx", path)){
     d <- openxlsx::read.xlsx(path, sheet = 1, colNames = FALSE) # only reads FIRST sheet
 # }
 # else if(grepl(".csv", path)){
@@ -48,29 +47,58 @@ path = "E:\\Documents\\Programming\\R\\First-Project\\example.xlsx"
   # Make any repeated labels unique (this is writing, do it last)
   index_Data[[1]] = make.unique(index_Data[[1]], sep = '_')
   
-  #____________sa_desc
+  #__________SA_DESC
   # d[rows with NA +1, columns that are not NA]
-  sa_desc <- d[c(which(is.na(d[,1])),max(which(is.na(d[,1])))+1), !is.na(d[1,])]
+  sa_Desc <- d[c(which(is.na(d[,1])),max(which(is.na(d[,1])))+1), !is.na(d[1,])]
   
   # swap rows and columns with t()
-  sa_desc = t(sa_desc)
-  colnames(sa_desc) = sa_desc[1,]
-  sa_desc <- data.frame(sa_desc[-1,], stringsAsFactors = FALSE, check.names = FALSE)
+  sa_Desc = t(sa_Desc)
+  colnames(sa_Desc) <- sa_Desc[1,]
+  sa_Desc <- data.frame(sa_Desc[-1,], stringsAsFactors = FALSE, check.names = FALSE)
   
-  sa_temp = lapply(sa_desc, function(x){
+  # preserve column type
+  sa_temp = lapply(sa_Desc, function(x){
     if (sum(!is.na(as.numeric(x))) == length(x)){
       as.numeric(x)
     } else {
       x
     }
-  }
-  )
+  })
   
   sa_temp = do.call(cbind, lapply(sa_temp, data.frame, stringsAsFactors = FALSE))
-  colnames(sa_temp) <- colnames(sa_desc)
-  sa_desc = sa_temp
+  colnames(sa_temp) <- colnames(sa_Desc)
+  sa_Desc = sa_temp
   
-  sa_desc = sa_desc[, c(ncol(sa_desc), 2:ncol(sa_desc)-1)]
-  sa_desc[[1]] = make.unique(sa_desc[[1]], sep = '_')
+  sa_Desc = sa_Desc[, c(ncol(sa_Desc), 2:ncol(sa_Desc)-1)]
+  sa_Desc[[1]] = make.unique(sa_Desc[[1]], sep = '_')
   
+  #__________SA_DATA
+  # d[first column without NA, first row without NA], then delete column and row names
+  sa_Data <- d[!is.na(d[,1]), !is.na(d[1,])][-1,-1]
+  # sa_Data is a data.frame of numerical values. Keep all as.numeric, no need to check each column.
+  sa_Data <- sapply(sa_Data, as.numeric)
+  # remake data.frame
+  sa_Data <- data.frame(sa_Data, stringsAsFactors = FALSE)
+  # column and row names can be taken from above
+  colnames(sa_Data) = sa_Desc[[1]]; rownames(sa_Data) = index_Data[[1]]
   
+  # Replace unwanted characters in column names with "_"
+  colnames(index_Data) = gsub("([_])[[:punct:]]","_",colnames(index_Data))
+  colnames(sa_Desc) = gsub("([_])[[:punct:]]","_",colnames(sa_Desc))
+  colnames(sa_Data) = gsub("([_])[[:punct:]]","_",colnames(sa_Data))
+  
+  # Make NA into "NA" to avoid unknown parameter error
+  index_Data[is.na(index_Data)] = "NA"
+  sa_Desc[is.na(sa_Desc)] = "NA"
+  sa_Data[is.na(sa_Data)] = "NA"
+  
+  # Remove unwanted characters in sa_Data with for-loop checking each cell
+  # for (i in 1:nrow(sa_Data)){
+  #   for (j in 1:ncol(sa_Data)){
+  #     sa_Data[i,j] = gsub("\\+|~|-","",sa_Data[i,j])
+  #   }
+  # }
+  # 
+  return(list(p = sa_Desc, f = index_Data, e = sa_Data))
+
+}

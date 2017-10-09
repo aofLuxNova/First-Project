@@ -1,0 +1,269 @@
+"label","No"
+"1_ISTD Ceramide (d18:1/17:0) [M+HCOO]- ",1
+"1_ISTD CUDA [M-H]- ",2
+"1_ISTD FA (16:0)-d3 [M-H]- ",4
+"1_ISTD LPC (17:0) [M+HCOO]- ",5
+"1_ISTD LPE (17:1) [M-H]-",8
+"1_ISTD PC (12:0/13:0) [M+HCOO]-",10
+"1_ISTD PE (17:0/17:0) [M-H]-",13
+"1_ISTD PG (17:0/17:0) [M-H]-",14
+"1_ISTD SM (d18:1/17:0) [M+HCOO]-",15
+"Cer (d32:1) [M+HCOO]-",16
+"Cer (d34:0) [M+HCOO]-",17
+"Cer (d34:1) [M+HCOO]- ",19
+"Cer (d34:2) [M+HCOO]-",20
+"Cer (d36:1) [M+HCOO]-",21
+"Cer (d38:1) [M+HCOO]-",23
+"Cer (d39:1) [M+HCOO]-",24
+"Cer (d40:1) [M+HCOO]-",26
+"Cer (d40:2) [M+HCOO]-",27
+"Cer (d41:1) [M+HCOO]-",29
+"Cer (d42:1) [M+HCOO]-",30
+"Cer (d42:2) A [M+HCOO]- ",32
+"Cer (d42:2) B [M+HCOO]-",33
+"Cer (d43:1) [M+HCOO]-",34
+"Cer (d44:1) [M+HCOO]-",35
+"FA (16:0) [M-H]-",133
+"FA (16:1) [M-H]-",134
+"FA (18:0) [M-H]-",135
+"FA (18:1) [M-H]-",136
+"FA (18:2) [M-H]-",137
+"FA (20:4) [M-H]-",138
+"FA (22:4) [M-H]-",139
+"GlcCer (d34:1) [M+HCOO]-",140
+"GlcCer (d38:1) [M+HCOO]-",141
+"GlcCer (d40:1) [M+HCOO]- ",142
+"GlcCer (d41:1) [M+HCOO]-",144
+"GlcCer (d42:1) [M+HCOO]- ",145
+"GlcCer (d42:2) [M+HCOO]-",147
+"LPC (14:0) [M+HCOO]-",148
+"LPC (16:0) [M+HCOO]-",152
+"LPC (16:1) [M+HCOO]-",154
+"LPC (18:0) [M+HCOO]-",156
+"LPC (18:1) [M+HCOO]- ",158
+"LPC (18:2) [M+HCOO]-",159
+"LPC (20:1) [M+HCOO]-",160
+"LPC (20:2) [M+HCOO]-",161
+"LPC (20:3) [M+HCOO]-",162
+"LPC (22:5) [M+HCOO]-",163
+"LPE (16:0) [M-H]-",164
+"LPE (18:2) [M-H]- ",165
+"LPE (20:4) [M-H]-",166
+"LPE (22:6) [M-H]- ",167
+"PC (30:0) [M+HCOO]-",168
+"PC (32:0) [M+HCOO]-",169
+"PC (32:1) [M+HCOO]-",170
+"PC (32:2) [M+HCOO]- ",172
+"PC (33:1) [M+HCOO]- ",173
+"PC (33:2) [M+HCOO]-",174
+"PC (34:0) [M+HCOO]-",175
+"PC (34:1) [M+HCOO]- ",176
+"PC (34:2) [M+HCOO]- ",178
+"PC (34:4) [M+HCOO]-",180
+"PC (35:2) [M+HCOO]- ",181
+"PC (36:1) [M+HCOO]- ",183
+"PC (36:2) [M+HCOO]- ",187
+"PC (36:3) [M+HCOO]-",189
+"PC (36:4) A [M+HCOO]- ",191
+"PC (36:4) B [M+HCOO]- ",193
+"PC (36:5) [M+HCOO]- ",194
+"PC (37:4) [M+HCOO]-",195
+"PC (38:2) [M+HCOO]-",196
+"PC (38:3) [M+HCOO]- ",197
+"PC (38:4) [M+HCOO]- ",198
+"PC (38:5) [M+HCOO]- ",199
+"PC (38:6) [M+HCOO]- ",201
+"PC (40:4) [M+HCOO]- ",202
+"PC (40:5) [M+HCOO]- ",204
+"PC (40:6) [M+HCOO]- ",205
+"PC (40:8) [M+HCOO]-",206
+"PC (42:4) [M+HCOO]-",207
+"PE (34:1) [M-H]-",208
+"PE (34:2) [M-H]-",209
+"PE (36:1) [M-H]-",210
+"PE (36:2) A [M-H]-",211
+"PE (36:2) B [M-H]-",212
+"PE (36:3) [M-H]-",213
+"PE (36:4) [M-H]-",214
+"PE (38:2) [M-H]-",216
+"PE (38:4) A [M-H]-",217
+"PE (38:4) B [M-H]-",218
+"PE (38:6) [M-H]-",219
+"PE (40:6) [M-H]-",222
+"PE (44:3) [M-H]-",223
+"PI (32:1) [M-H]-",229
+"PI (34:1) [M-H]- ",230
+"PI (34:2) [M-H]- ",232
+"PI (36:1) [M-H]- ",233
+"PI (36:2) [M-H]- ",234
+"PI (36:3) [M-H]- ",235
+"PI (36:4) [M-H]-",237
+"PI (38:3) [M-H]-",238
+"PI (38:4) [M-H]- ",240
+"PI (38:5) [M-H]-",241
+"PI (40:6) [M-H]-",242
+"plasmenyl-PC (32:0) [M+HCOO]-",248
+"plasmenyl-PC (34:0) [M+HCOO]- ",249
+"plasmenyl-PC (34:1) [M+HCOO]- ",250
+"plasmenyl-PC (34:2) [M+HCOO]- ",251
+"plasmenyl-PC (36:0) [M+HCOO]-",252
+"plasmenyl-PC (36:1) [M+HCOO]-",253
+"plasmenyl-PC (36:2) [M+HCOO]-",254
+"plasmenyl-PC (36:3) [M+HCOO]-",255
+"plasmenyl-PC (36:4) [M+HCOO]- ",256
+"plasmenyl-PC (38:0) [M+HCOO]-",257
+"plasmenyl-PC (38:4) [M+HCOO]- ",258
+"plasmenyl-PC (38:5) [M+HCOO]-",260
+"plasmenyl-PC (40:1) [M+HCOO]-",261
+"plasmenyl-PC (40:4) [M+HCOO]-",262
+"plasmenyl-PC (42:4) [M+HCOO]-",263
+"plasmenyl-PE (34:1) [M-H]-",264
+"plasmenyl-PE (34:2) [M-H]- ",265
+"plasmenyl-PE (36:1) [M-H]-",266
+"plasmenyl-PE (36:2) [M-H]- ",267
+"plasmenyl-PE (36:4) [M-H]- ",268
+"plasmenyl-PE (36:5) [M-H]- ",269
+"plasmenyl-PE (38:2) [M-H]-",270
+"plasmenyl-PE (38:3) [M-H]-",271
+"plasmenyl-PE (38:4) [M-H]- ",273
+"plasmenyl-PE (38:5) [M-H]- ",274
+"plasmenyl-PE (38:6) [M-H]- ",275
+"plasmenyl-PE (40:4) [M-H]-",276
+"plasmenyl-PE (40:5) [M-H]-",277
+"plasmenyl-PE (40:6) [M-H]- ",278
+"plasmenyl-PE (40:7) [M-H]-",279
+"CSH_negESI #513",283
+"CSH_negESI #514",285
+"CSH_negESI #515",291
+"SM (d32:0) [M+HCOO]-",294
+"SM (d32:1) [M+HCOO]-",296
+"SM (d32:2) [M+HCOO]-",297
+"SM (d33:1) [M+HCOO]-",298
+"SM (d34:0) [M+HCOO]-",299
+"SM (d34:1) [M+HCOO]-",300
+"SM (d34:2) [M+HCOO]-",303
+"SM (d36:0) [M+HCOO]-",304
+"SM (d36:1) [M+HCOO]- ",305
+"SM (d36:2) [M+HCOO]- ",306
+"SM (d38:1) [M+HCOO]-",308
+"SM (d38:2) [M+HCOO]- ",309
+"SM (d40:0) [M+HCOO]-",310
+"SM (d40:1) [M+HCOO]-",313
+"SM (d40:2) [M-HCOO]- ",314
+"SM (d40:3) [M+HCOO]-",315
+"SM (d41:1) [M+HCOO]-",317
+"SM (d41:2) [M+HCOO]-",318
+"SM (d42:1) [M+HCOO]-",321
+"SM (d42:2) A [M+HCOO]-",325
+"SM (d42:2) B [M+HCOO]-",326
+"SM (d42:3) [M+HCOO]-",328
+"SM (d43:2) [M+HCOO]-",329
+"CSH_negESI #014",36
+"CSH_negESI #017",37
+"CSH_negESI #021",38
+"CSH_negESI #024",39
+"CSH_negESI #046",40
+"CSH_negESI #056",41
+"CSH_negESI #071",42
+"CSH_negESI #074",43
+"CSH_negESI #078",44
+"CSH_negESI #079",45
+"CSH_negESI #091",46
+"CSH_negESI #108",47
+"CSH_negESI #109",48
+"CSH_negESI #113",49
+"CSH_negESI #120",50
+"CSH_negESI #120 ",51
+"CSH_negESI #123",52
+"CSH_negESI #124",53
+"CSH_negESI #130",54
+"CSH_negESI #131",55
+"CSH_negESI #132",56
+"CSH_negESI #133",57
+"CSH_negESI #134",58
+"CSH_negESI #135",59
+"CSH_negESI #136",60
+"CSH_negESI #137",61
+"CSH_negESI #138",62
+"CSH_negESI #139",63
+"CSH_negESI #140",64
+"CSH_negESI #144",65
+"CSH_negESI #146",66
+"CSH_negESI #191",67
+"CSH_negESI #192",68
+"CSH_negESI #199",69
+"CSH_negESI #200",70
+"CSH_negESI #202",71
+"CSH_negESI #203",72
+"CSH_negESI #206",73
+"CSH_negESI #206_1",74
+"CSH_negESI #220",75
+"CSH_negESI #221",76
+"CSH_negESI #223",77
+"CSH_negESI #223_1",78
+"CSH_negESI #238",79
+"CSH_negESI #251",80
+"CSH_negESI #251_1",81
+"CSH_negESI #252",82
+"CSH_negESI #253",83
+"CSH_negESI #257",84
+"CSH_negESI #259",85
+"CSH_negESI #261",86
+"CSH_negESI #264",87
+"CSH_negESI #264_1",88
+"CSH_negESI #275",89
+"CSH_negESI #275_1",90
+"CSH_negESI #278",91
+"CSH_negESI #290",92
+"CSH_negESI #293",93
+"CSH_negESI #293_1",94
+"CSH_negESI #298",95
+"CSH_negESI #298_1",96
+"CSH_negESI #308",97
+"CSH_negESI #309",98
+"CSH_negESI #310",99
+"CSH_negESI #340",100
+"CSH_negESI #344",101
+"CSH_negESI #345",102
+"CSH_negESI #347",103
+"CSH_negESI #365",104
+"CSH_negESI #366",105
+"CSH_negESI #374",106
+"CSH_negESI #375",107
+"CSH_negESI #376",108
+"CSH_negESI #377",109
+"CSH_negESI #378",110
+"CSH_negESI #379",111
+"CSH_negESI #380",112
+"CSH_negESI #381",114
+"CSH_negESI #382",115
+"CSH_negESI #384",116
+"CSH_negESI #385",117
+"CSH_negESI #386",118
+"CSH_negESI #386_1",119
+"CSH_negESI #387",120
+"CSH_negESI #388",121
+"CSH_negESI #389",122
+"CSH_negESI #390",123
+"CSH_negESI #391",124
+"CSH_negESI #392",125
+"CSH_negESI #393",126
+"CSH_negESI #394",127
+"CSH_negESI #395",128
+"CSH_negESI #396",129
+"CSH_negESI #397",130
+"CSH_negESI #400",131
+"CSH_negESI #401",132
+"CSH_negESI #500",215
+"CSH_negESI #501",225
+"CSH_negESI #502",239
+"CSH_negESI #503",243
+"CSH_negESI #504",244
+"CSH_negESI #505",245
+"CSH_negESI #506",246
+"CSH_negESI #507",247
+"CSH_negESI #508",286
+"CSH_negESI #509",287
+"CSH_negESI #510",288
+"CSH_negESI #511",289
+"CSH_negESI #512",293
