@@ -54,6 +54,7 @@ readData = function(path = "E:\\Documents\\Programming\\R\\excel\\example.xlsx")
   # swap rows and columns with t()
   sa_Desc = t(sa_Desc)
   colnames(sa_Desc) <- sa_Desc[1,]
+  
   sa_Desc <- data.frame(sa_Desc[-1,], stringsAsFactors = FALSE, check.names = FALSE)
   
   # preserve column type
@@ -70,7 +71,7 @@ readData = function(path = "E:\\Documents\\Programming\\R\\excel\\example.xlsx")
   sa_Desc = sa_temp
   
   sa_Desc = sa_Desc[, c(ncol(sa_Desc), 2:ncol(sa_Desc)-1)]
-  sa_Desc[[1]] = make.unique(sa_Desc[[1]], sep = '_')
+  sa_Desc[[1]] = make.unique(make.names(sa_Desc[[1]]), sep = '_')
   
   #__________SA_DATA
   # d[first column without NA, first row without NA], then delete column and row names
@@ -80,24 +81,18 @@ readData = function(path = "E:\\Documents\\Programming\\R\\excel\\example.xlsx")
   # remake data.frame
   sa_Data <- data.frame(sa_Data, stringsAsFactors = FALSE)
   # column and row names can be taken from above
-  colnames(sa_Data) = sa_Desc[[1]]; rownames(sa_Data) = index_Data[[1]]
+  rownames(sa_Data) = index_Data[[1]]
   
   # Replace unwanted characters in column names with "_"
-  colnames(index_Data) = gsub("([_])[[:punct:]]","_",colnames(index_Data))
-  colnames(sa_Desc) = gsub("([_])[[:punct:]]","_",colnames(sa_Desc))
-  colnames(sa_Data) = gsub("([_])[[:punct:]]","_",colnames(sa_Data))
+  # colnames(index_Data) = gsub("([_])[[:punct:]]","_",colnames(index_Data))
+  # colnames(sa_Desc) = gsub("([_])[[:punct:]]","_",colnames(sa_Desc))
+  # colnames(sa_Data) = gsub("([_])[[:punct:]]","_",colnames(sa_Data))
   
   # Make NA into "NA" to avoid unknown parameter error
   index_Data[is.na(index_Data)] = "NA"
   sa_Desc[is.na(sa_Desc)] = "NA"
   sa_Data[is.na(sa_Data)] = "NA"
-  
-  # Remove unwanted characters in sa_Data with for-loop checking each cell
-  # for (i in 1:nrow(sa_Data)){
-  #   for (j in 1:ncol(sa_Data)){
-  #     sa_Data[i,j] = gsub("\\+|~|-","",sa_Data[i,j])
-  #   }
-  # }
+
   # 
   return(list(p = sa_Desc, f = index_Data, e = sa_Data))
 
