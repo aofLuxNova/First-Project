@@ -1,15 +1,14 @@
 # Studying reference code
 
 # Make a function and later return subset data
-readData = function(path = "E:\\Documents\\Programming\\R\\excel\\example.xlsx"){
+readData = function(path="E:\\Documents\\Programming\\R\\excel\\example.xlsx"){
 
 #check file extension
-# if(grepl(".xlsx", path)){
+ if(grepl(".xlsx", path)){
     d <- openxlsx::read.xlsx(path, sheet = 1, colNames = FALSE) # only reads FIRST sheet
-# }
-# else if(grepl(".csv", path)){
-#   d <- data.table::fread(path)
-# }
+ } else if(grepl(".csv", path)){
+   d <- data.table::fread(path)
+ }
   
   # make all blanks NA
   d[d == ""] <- NA
@@ -17,6 +16,15 @@ readData = function(path = "E:\\Documents\\Programming\\R\\excel\\example.xlsx")
   #______________INDEX_DATA
   # d[rows that do not have NA, columns that have NA plus one "label" column]
   index_Data <- d[which(!is.na(d[,1])), c(which(is.na(d[1,])), max(which(is.na(d[1,])))+1)]
+  
+  if (grepl("name",index_Data[1,])){
+    ilabel <- which(grepl("name",index_Data[1,]))
+  } else if (grepl("label",index_Data[1,])){
+    ilabel <- which(grepl("label",index_Data[1,]))
+  }
+  
+  
+  
   # Need to name columns
   # Force first row to be character type, saved column names
   colnames(index_Data) <- as.character(index_Data[1,])
