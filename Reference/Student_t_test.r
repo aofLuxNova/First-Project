@@ -52,5 +52,54 @@ t.test(sa, sb)
 # was used for the test.
 
 # t-test of xylose and xylonic acid isomer
+# make each compound into a list
+# lapply t.test to each compound
+# print out result
+
+path = "E:\\Documents\\Programming\\R\\excel\\Jayoung Kim two cmpd.xlsx"
+d <- openxlsx::read.xlsx(path, sheet = 1, colNames = T)
+d[d == ""] <- NA
+
+rgender <- colnames(d)
+ccompound <- d[,1] 
+
+# slower
+# sa.other = apply(d[,c(which(rgender == "Male"),which(rgender == "Female"))], MARGIN = 1, function (x) { t.test(x[which(rgender == "Male")],x[which(rgender == "Female")], var.equal = TRUE, paired = FALSE)})
+
+# faster
+
+sa = d[,which(rgender == "Male")]
+sb = d[,which(rgender == "Female")]
+sa = t(sa); sa = as.data.frame(sa)
+sb = t(sb); sb = as.data.frame(sb)
+
+sa.p = mapply(function(x,y){
+  t.test(x,y)
+},x=sa,y=sb)
 
 
+list.p <- sa.p["p.value",]
+
+# fold change (gtools)
+
+sa.f = mapply(function(x,y){
+  foldchange(x,y)
+},x=sa,y=sb)
+
+sa.f = apply(sa.f, 2, mean); list.f <- as.list(sa.f)
+
+result = data.frame(cbind(list.p,list.f), row.names = ccompound); colnames(result) = c("p-value","fold change")
+
+
+# Benchmark
+# o = d[,c(which(rgender == "Male"),which(rgender == "Female"))]
+# microbenchmark::microbenchmark(
+#   {
+#     sa.other = apply(o, MARGIN = 1, function (x) { t.test(x[which(rgender == "Male")],x[which(rgender == "Female")], var.equal = TRUE, paired = FALSE)})
+#     },{
+#       sa. = mapply(function(x,y){
+#         t.test(x,y)
+#       },x=sa,y=sb)
+#     })
+
+#colnames(sa) <- ccompound; colnames(sb) <- ccompound
