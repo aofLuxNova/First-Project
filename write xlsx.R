@@ -31,8 +31,7 @@ sa.f = mapply(function(x,y){
   foldchange(x,y)
 },x=sa.avg,y=sb.avg)
 
-list.f <- as.list(sa.f)
+result = cbind(list.p, sa.f); colnames(result) = c("p-value","fold change")
+#result = data.frame(cbind(list.p,list.f), row.names = rownames(e)); colnames(result) = c("p-value","fold change")
 
-result = data.frame(cbind(list.p,list.f), row.names = rownames(e)); colnames(result) = c("p-value","fold change")
-
-openxlsx::write.xlsx(result, file = "result.xlsx", colNames = TRUE, rowNames = TRUE)
+write.csv(result, file = "Kim_Result.csv", append = FALSE, qmethod = D, quote = TRUE)
