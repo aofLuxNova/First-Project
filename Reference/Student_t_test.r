@@ -79,14 +79,18 @@ sa.p = mapply(function(x,y){
 
 
 list.p <- sa.p["p.value",]
-
+  
 # fold change (gtools)
 
+sa.avg <- lapply(sa, mean)
+sb.avg <- lapply(sb, mean)
+
+# Fold change = Mean male peak intensity / Mean female peak intensity
 sa.f = mapply(function(x,y){
   foldchange(x,y)
-},x=sa,y=sb)
+},x=sa.avg,y=sb.avg)
 
-sa.f = apply(sa.f, 2, mean); list.f <- as.list(sa.f)
+list.f <- as.list(sa.f)
 
 result = data.frame(cbind(list.p,list.f), row.names = ccompound); colnames(result) = c("p-value","fold change")
 
